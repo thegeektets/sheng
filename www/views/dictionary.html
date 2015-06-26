@@ -1,0 +1,34 @@
+<div class="container">
+<form class="form-horizontal">
+    <fieldset>
+   <div class="form-group">
+            <label for="search" class="col-lg-2 control-label">Search</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="saarch" ng-model = 'search' placeholder="Search">
+            </div>
+        </div>
+</fieldset>
+</form>
+
+<ul class="list-group">
+    
+
+    <li class="list-group-item" ng-repeat="diction in dictionary | filter:search | orderBy:diction.word | filter:filters  " ng-show="diction._id.$oid">
+        <div class="row-action-primary">
+            <a href ="#/diction/{{diction._id.$oid}}">
+            <i class="mdi-action-toc"></i>
+            </a>
+        </div>
+        <div class="row-content">
+            <div class="least-content"></div>
+            <h4 class="list-group-item-heading">{{diction.word}}</h4>
+            <p class="list-group-item-text">{{diction.definition_1}}</p>
+            <p class="list-group-item-text">{{diction.definition_2}}</p>
+             <p class="list-group-item-text">{{diction.definition_3}}</p>
+        </div>
+         <div class="list-group-separator"></div>
+
+    </li>
+   
+</ul>
+</div>
