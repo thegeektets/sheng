@@ -32,6 +32,16 @@ angular.module('sheng', ['ionic', 'starter.controllers', 'starter.services','res
         templateUrl: 'views/dictionary.html',
         controller: 'DictCtrl'
       })
+     .when('/submit', {
+ 
+        templateUrl: 'views/submit.html',
+        controller: 'SubCtrl'
+      })
+      .when('/word', {
+ 
+        templateUrl: 'views/word.html',
+        controller: 'WordCtrl'
+      })
 
     .when('/diction/:dictionID', {
  
