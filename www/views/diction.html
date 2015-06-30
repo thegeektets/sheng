@@ -1,10 +1,23 @@
+
+
+
 <div class="container">
-<div class="panel panel-info" >
-    <div class="panel-heading" style="background: #006600;color:#fff;">
-        <h3 class="panel-title">{{diction.word}}</h3>
-    </div>
+<div class="well well-lg">
+		  <span ng-init us-spinner="{radius:30, width:8, length: 16}" style='text-align:center'>
+		 <p>
+		  kua mpole ..
+		  </p>
+
+		  </span>
+
+   <h2 style='text-transform:uppercase'class="panel-title">{{diction.word}}</h2>
+
     <div class="panel-body">
-       {{diction.definition_1}}
+       <p class="list-group-item-text">{{diction.definition_1}}</p>
+            <p class="list-group-item-text">{{diction.definition_2}}</p>    
+             <p class="list-group-item-text">{{diction.definition_3}}</p>
+
+
     </div>
 </div>
 </div>

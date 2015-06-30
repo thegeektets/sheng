@@ -1,4 +1,8 @@
-.green{
-	background-color : #006600;
-	
+.pageloader {
+  background: url(../img/loader.gif) center center no-repeat #fff;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
 }

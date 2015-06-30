@@ -1,5 +1,6 @@
 
-angular.module('sheng', ['ionic', 'starter.controllers', 'starter.services','restangular','ngRoute'])
+angular.module('sheng', ['ionic', 'starter.controllers', 'starter.services','restangular','ngRoute',
+  'ngLoadingSpinner'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

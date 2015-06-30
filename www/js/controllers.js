@@ -1,26 +1,50 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers',[])
 
 .controller('DictCtrl', function($scope,$location, Restangular,$rootScope,$http) {
+  
+ $http.get('ajax_suspend');
+
+
+
   $scope.dictionary = Restangular.all("dictionary").getList().$object;
+
+  	$scope.go = function (link) {
+
+  		 $location.path(link);
+  	}
+
+  $scope.loading = false;   
+       
 
 })
 
-.controller('DictionCtrl', function($scope,$location, Restangular,$rootScope,$http,diction) {
+
+.controller('DictionCtrl', function($scope,$location, Restangular,$rootScope,$http,diction,usSpinnerService) {
+   $http.get('ajax_suspend');
+
+   
   var original = diction;
  	$scope.random = 0;
   $scope.diction = Restangular.copy(original);
 
 })
 .controller('WordCtrl',function($scope,$location, Restangular){
+  $http.get('ajax_suspend');
 
-	$scope.random = Math.floor((Math.random() * 10) + 1);
+  
 	$scope.dictionary = Restangular.all("dictionary").getList().$object;
+	
+	$scope.random = Math.floor((Math.random() * 10) + 1);
+	
 	$scope.diction = $scope.dictionary;
 
 
 })
 
 .controller('SubCtrl',function($scope,$location, Restangular){
+  $http.get('ajax_suspend');
+
+
 
 	$scope.save = function () {
        
