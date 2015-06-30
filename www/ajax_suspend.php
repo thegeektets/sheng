@@ -1,5 +1,5 @@
 <?php
 
-  sleep(15)
+  sleep(10)
 
 ?>

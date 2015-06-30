@@ -2,7 +2,7 @@ angular.module('starter.controllers',[])
 
 .controller('DictCtrl', function($scope,$location, Restangular,$rootScope,$http) {
   
- $http.get('ajax_suspend');
+ $http.get('ajax_suspend.php');
 
 
 
@@ -20,7 +20,7 @@ angular.module('starter.controllers',[])
 
 
 .controller('DictionCtrl', function($scope,$location, Restangular,$rootScope,$http,diction,usSpinnerService) {
-   $http.get('ajax_suspend');
+   $http.get('ajax_suspend.php');
 
    
   var original = diction;
@@ -28,8 +28,8 @@ angular.module('starter.controllers',[])
   $scope.diction = Restangular.copy(original);
 
 })
-.controller('WordCtrl',function($scope,$location, Restangular){
-  $http.get('ajax_suspend');
+.controller('WordCtrl',function($scope,$location, Restangular,$http){
+  $http.get('ajax_suspend.php');
 
   
 	$scope.dictionary = Restangular.all("dictionary").getList().$object;
@@ -41,8 +41,8 @@ angular.module('starter.controllers',[])
 
 })
 
-.controller('SubCtrl',function($scope,$location, Restangular){
-  $http.get('ajax_suspend');
+.controller('SubCtrl',function($scope,$location, Restangular,$http){
+  $http.get('ajax_suspend.php');
 
 
 
