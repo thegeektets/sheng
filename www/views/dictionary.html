@@ -4,6 +4,12 @@
 <div>
 <div ng-if="contentLoaded">
 -->
+
+<!--
+<button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
+  Register for Push
+</button>
+-->
 <div class="container">
 <form class="form-horizontal">
     <fieldset>
@@ -14,17 +20,12 @@
         </div>
 </fieldset>
 </form>
-    <span ng-init us-spinner="{radius:30, width:8, length: 16}" style='text-align:center'>
-         <p>
-          kua mpole ..
-          </p>
 
-          </span>
 
 <ul class="list-group">
     
 
-    <li class="btn btn-flat btn-default" style="width:100%;text-align:left;" ng-repeat="diction in dictionary | filter:search | orderBy:diction.word | filter:filters  " ng-show="diction._id.$oid" 
+    <li class="btn btn-flat btn-default" style="width:100%;text-align:left;" ng-repeat="diction in dictionary | filter:search | filter:filters  " ng-show="diction._id.$oid" 
     ng-click="go('/diction/{{diction._id.$oid}}')">
          
          <!--
@@ -48,5 +49,13 @@
     </li>
     
 </ul>
+
+    <span ng-init us-spinner="{radius:30, width:8, length: 16}" style='text-align:center'>
+         <p>
+          manze kua mpole ..
+          </p>
+
+          </span>
 </div>
+
 </div>

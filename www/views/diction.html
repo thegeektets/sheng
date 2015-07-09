@@ -3,21 +3,38 @@
 
 <div class="container">
 <div class="well well-lg">
-		  <span ng-init us-spinner="{radius:30, width:8, length: 16}" style='text-align:center'>
-		 <p>
-		  kua mpole ..
-		  </p>
 
-		  </span>
 
    <h2 style='text-transform:uppercase'class="panel-title">{{diction.word}}</h2>
 
     <div class="panel-body">
-       <p class="list-group-item-text">{{diction.definition_1}}</p>
-            <p class="list-group-item-text">{{diction.definition_2}}</p>    
-             <p class="list-group-item-text">{{diction.definition_3}}</p>
-
+       <p class="list-group-item-text"><strong style="color:#18453B">Meaning</strong> </br><span style='text-transform: lowercase;'>{{diction.definition_1}}</span></p>
+       <p ng-if='diction.use' class="list-group-item-text"><strong style="color:#18453B">Use</strong> </br><span style='text-transform: lowercase;'>{{diction.use}}</span></p>
 
     </div>
+    
+    <div id="share-buttons">
+    
+    
+ 
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{diction.word}}" target="_blank" class="btn btn-material-blue-900">
+    Facebook
+
+    </a>
+  
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url={{diction.word}}&amp;hashtags=sheng" 
+    target="_blank" class="btn btn-material-blue-A200">
+    Twitter
+    </a>
+ 
+</div>
+              <span ng-init us-spinner="{radius:30, width:8, length: 16}" style='text-align:center'>
+         <p>
+          manze kua mpole ..
+          </p>
+
+          </span>
 </div>
 </div>

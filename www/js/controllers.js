@@ -1,9 +1,8 @@
 angular.module('starter.controllers',[])
 
-.controller('DictCtrl', function($scope,$location, Restangular,$rootScope,$http) {
+.controller('DictCtrl', function($scope, $ionicDeploy, $location, Restangular,$rootScope,$http, $ionicUser, $ionicPush) {
   
- $http.get('ajax_suspend.php');
-
+ //$http.get('ajax_suspend.php');
 
 
   $scope.dictionary = Restangular.all("dictionary").getList().$object;
@@ -14,13 +13,21 @@ angular.module('starter.controllers',[])
   	}
 
   $scope.loading = false;   
-       
+   
+
+  $rootScope.$on('$cordovaPush:tokenReceived', function(event, data) {
+ //   alert("Successfully registered token " + data.token);
+    console.log('Ionic Push: Got token ', data.token, data.platform);
+    $scope.token = data.token;
+    //alert(data.token);
+
+  });  
 
 })
 
 
 .controller('DictionCtrl', function($scope,$location, Restangular,$rootScope,$http,diction,usSpinnerService) {
-   $http.get('ajax_suspend.php');
+  // $http.get('ajax_suspend.php');
 
    
   var original = diction;
@@ -29,7 +36,7 @@ angular.module('starter.controllers',[])
 
 })
 .controller('WordCtrl',function($scope,$location, Restangular,$http){
-  $http.get('ajax_suspend.php');
+  //$http.get('ajax_suspend.php');
 
   
 	$scope.dictionary = Restangular.all("dictionary").getList().$object;
@@ -42,7 +49,7 @@ angular.module('starter.controllers',[])
 })
 
 .controller('SubCtrl',function($scope,$location, Restangular,$http){
-  $http.get('ajax_suspend.php');
+ // $http.get('ajax_suspend.php');
 
 
 
