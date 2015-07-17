@@ -4,6 +4,19 @@ angular.module('sheng', ['ionic', 'ngCordova',
   'starter.services','restangular','ngRoute',
   'ngLoadingSpinner'])
 
+.filter('orderObjectBy', function() {
+  return function(items, field, reverse) {
+    var filtered = [];
+    angular.forEach(items, function(item) {
+      filtered.push(item);
+    });
+    filtered.sort(function (a, b) {
+      return (a[field] > b[field] ? 1 : -1);
+    });
+    if(reverse) filtered.reverse();
+    return filtered;
+  };
+})
 .run(function($ionicPlatform,$ionicAnalytics,$ionicUser, $ionicPush,$ionicDeploy) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

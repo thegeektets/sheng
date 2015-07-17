@@ -25,7 +25,9 @@
 <ul class="list-group">
     
 
-    <li class="btn btn-flat btn-default" style="width:100%;text-align:left;" ng-repeat="diction in dictionary | filter:search | filter:filters  " ng-show="diction._id.$oid" 
+    <li class="btn btn-flat btn-default" style="width:100%;text-align:left;" 
+
+    ng-repeat="diction in dictionary | filter:search | filter:filters | orderObjectBy:'word':false " ng-show="diction._id.$oid" 
     ng-click="go('/diction/{{diction._id.$oid}}')">
          
          <!--
@@ -38,7 +40,9 @@
         <div class="row-content">
             <div class="least-content"></div>
              
-            <h4 style="font-family: 'Josefin Sans', sans-serif;" class="list-group-item-heading">{{diction.word}}</h4>
+            <h4 style="font-family: 'Josefin Sans', sans-serif;" class="list-group-item-heading">
+
+            {{diction.word}}</h4>
            
                    </div>
        <!--
@@ -52,7 +56,7 @@
 
     <span ng-init us-spinner="{radius:30, width:8, length: 16}" style='text-align:center'>
          <p>
-          manze kua mpole ..
+          maze kua mpole ..
           </p>
 
           </span>
