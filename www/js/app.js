@@ -18,13 +18,9 @@ angular.module('sheng', ['ionic', 'ngCordova',
   };
 })
 .run(function($ionicPlatform,$ionicAnalytics,$ionicUser, $ionicPush,$ionicDeploy) {
+  
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
     
-    // registering user
-    console.log('Ionic User: Identifying with Ionic User service');
-
     var user = $ionicUser.get();
     if(!user.user_id) {
       // Set your user_id here, or generate a random one.
@@ -38,17 +34,16 @@ angular.module('sheng', ['ionic', 'ngCordova',
     });
 
     // Identify your user with the Ionic User Service
-    $ionicUser.identify(user).then(function(){
+    $ionicUser.identify(user);
+    /*.then(function(){
      // $scope.identified = true;
      console.log('Identified user ' + user.name + '\n ID ' + user.user_id);
-    });
+    });*/
 
     //registering for push 
 
-    console.log('Ionic Push: Registering user');
-
-    // Register with the Ionic Push service.  All parameters are optional.
-    $ionicPush.register({
+      // Register with the Ionic Push service.  All parameters are optional.
+    /*$ionicPush.register({
       canShowAlert: true, //Can pushes show an alert on your screen?
       canSetBadge: true, //Can pushes update app icon badges?
       canPlaySound: true, //Can notifications play a sound?
@@ -60,7 +55,7 @@ angular.module('sheng', ['ionic', 'ngCordova',
         return true;
       }
     });
-
+    */
   
     //register for analytics
 
