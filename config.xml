@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.sheng904765" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>NOMA SANA</name>
+<widget id="com.ionicframework.sheng904765" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>SHENG SLANG</name>
   <description>
        Learn some sheng
     </description>
-  <author email="griffinmuteti31@gmail.com" href="http://dezariventures.com/">
+  <author email="griffin@shengslang.com" href="http://shengslang.com/">
      Griffin
     </author>
   <content src="index.html"/>

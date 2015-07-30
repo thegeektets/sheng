@@ -15,13 +15,7 @@ angular.module('starter.controllers',[])
   $scope.loading = false;   
    
 
-  $rootScope.$on('$cordovaPush:tokenReceived', function(event, data) {
- //   alert("Successfully registered token " + data.token);
-    console.log('Ionic Push: Got token ', data.token, data.platform);
-    $scope.token = data.token;
-    //alert(data.token);
-
-  });  
+    
 
 })
 
